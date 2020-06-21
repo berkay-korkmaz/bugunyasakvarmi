@@ -1,23 +1,65 @@
 <!doctype html>
 <html lang="tr">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bugün sokağa çıkma yasağı var mı?</title>
-  <meta name="description" content="Sokaga cikma yasagi var mı? Buyuk sehirlerde sokaga cikma yasagi var mı? hangi illerde sokaga cikma yasagi var? ">
-  <meta name="Keywords" content="sokak, yasak, sokaga, cikma, buyuk sehirler, ankara, istanbul, izmir, yasak var mi"/>
-  <script data-ad-client="ca-pub-8768719383301709" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <title>Bugün sokağa çıkma yasağı var mı? Hangi illerde sokağa çıkma yasağı var? Kimler için sokağa çıkma
+    yasağı var?</title>
+  <meta name="description"
+    content="Sokağa çıkma yasağı var mı? Büyük şehirlerde sokağa çıkma yasağı var mı? hangi illerde sokağa çıkma yasağı var? Sokağa çıkma yasağı kalktı mı? Ankara'da, İstanbul'da, İzmir'de sokağa çıkma yasağı var mı?">
+  <meta name="Keywords"
+    content="sokak, yasak, sokaga, cikma, buyuk sehirler, ankara, istanbul, izmir, yasak var mi" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: whitesmoke;
+    }
+  </style>
+  <script data-ad-client="ca-pub-8768719383301709" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
-  <h1>Bugün sokağa çıkma yasağı YOK</h1>
-  <p>21 Haziran 2020</p>
-  
+  <div class="container text-center" id="app">
+    <div class="row align-items-center" style="height: 100vh;">
+      <div class="col-12">
+        <p>{{dateTime}}</p>
+        <h1 class="font-weight-bold mb-0">Bugün sokağa çıkma yasağı var mı?</h1>
+        <span v-if="!isCurfew" class="badge badge-success p-3 my-5" style="font-size: 0.9em;">Sokağa çıkma
+          yasağı yok.</span>
+        <span v-if="isCurfew" class="badge badge-danger p-3 my-5" style="font-size: 0.9em;">Sokağa çıkma
+          yasağı var.</span>
+        <div class="">
+          <p v-if="isCurfew"><span class="font-weight-bold">Sokağa çıkma yasağı olan iller:
+            </span>{{details.cities}}</p>
+          <p v-if="isCurfew"><span class="font-weight-bold">Sokağa çıkma yasağı kimleri kapsıyor:
+            </span>{{details.who}}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/scripts.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170190315-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-170190315-1');
