@@ -24,7 +24,15 @@ var app = new Vue({
     },
     getDate() {
       let d = new Date();
-      let locale = d.toLocaleString('tr-TR', {hour12: false})
+      let locale = d.toLocaleString('tr-TR', {
+        hour12: false, 
+        weekday: 'long', 
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        month: 'long',
+        day: '2-digit'
+      })
       this.timestamp = locale;
     },
     getHour() {
