@@ -13,10 +13,6 @@ var app = new Vue({
       let d = new Date();
       let weekends = ['Sunday', 'Saturday']
       return weekends.includes(d.getDay()) 
-    },
-    hour() {
-      let d = new Date();
-      return d.getHours()
     }
   },
   created() {
@@ -31,6 +27,10 @@ var app = new Vue({
       let locale = d.toLocaleString('tr-TR', {hour12: false})
       this.timestamp = locale;
     },
+    getHour() {
+      let d = new Date();
+      return d.getHours()
+    },
     retry() {
       this.checked = false
       this.ageGroup = 0
@@ -43,13 +43,13 @@ var app = new Vue({
         return
       }
       if(this.isWeekend) {
-        if( this.hour > 20 && this.hour < 10 ) {
+        if( this.getHour() > 20 || this.getHour() < 10 ) {
           this.forbidden = true
         } 
       } else {
-        if( this.ageGroup === 0 && this.hour > 16 && this.hour < 13 ) {
+        if( this.ageGroup === 0 && (this.getHour() > 16 || this.getHour() < 13) ) {
           this.forbidden = true
-        } else if(this.ageGroup === 2 && this.hour > 13 && this.hour < 10) {
+        } else if(this.ageGroup === 2 && (this.getHour() > 13 || this.getHour() < 10)) {
           this.forbidden = true
         }
       }
