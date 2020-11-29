@@ -97,24 +97,26 @@
     </b-card>
     <div class="text-center">
       <p class="mb-1">
+        <b-link
+          class="text-danger text-decoration-none"
+          @click="$bvModal.show('warning-modal')">
+          <small>
+            <b>
+              UYARI METNİ İÇİN TIKLAYINIZ
+            </b>
+          </small>
+        </b-link>
+      </p>
+      <p class="mb-0">
         <small>
-          Bu websitesi,
+          Kaynak kodu:
           <b-link
-            href="https://www.linkedin.com/in/berkaykorkmaz/"
+            href="https://github.com/berkay-korkmaz/bugunyasakvarmi"
             class="text-decoration-none font-weight-bold">
-            benim
-          </b-link> tarafımdan hayrına hazırlanmıştır.
+            GitHub
+          </b-link>
         </small>
       </p>
-      <b-link
-        class="text-danger text-decoration-none"
-        @click="$bvModal.show('warning-modal')">
-        <small>
-          <b>
-            UYARI METNİ İÇİN TIKLAYINIZ
-          </b>
-        </small>
-      </b-link>
     </div>
     <warning-modal />
   </div>
