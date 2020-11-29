@@ -9,11 +9,11 @@
         Uyarı!
       </span>
     </template>
+    <p class="text-danger font-weight-bold">
+      Bu uygulamadaki bilgilerin hiçbir yasal geçerliliği yoktur. Bu uygulama ile sokağa çıkma yasağı sorgulaması yaptıktan sonra sokağa çıkıp ceza yemeniz durumunda hiçbir yasal sorumluluk kabul etmiyorum.
+    </p>
     <p>
-      <span class="text-primary">
-        bugunyasakvarmi.com'u
-      </span>
-      T.C. İçişleri Bakanlığı websitesindeki
+      Bu websitesini T.C. İçişleri Bakanlığı Websitesi'ndeki
       <b-link
         class="font-weight-bold text-decoration-none"
         href="https://www.icisleri.gov.tr/koronavirus-salgini-yeni-tedbirler">
@@ -21,11 +21,12 @@
       </b-link>
       ve çeşitli haber kaynaklarından aldığım bilgiler doğrultusunda, insanların kafa karışıklığını gidermek amacıyla gönüllü olarak hazırladım. Kurallar değiştikçe de güncellemeye özen göstereceğim.
     </p>
-    <p class="text-danger">
-      Bu websitesindeki bilgilerin hiçbir yasal geçerliliği yoktur. Bu websitesine baktıktan sonra sokağa çıkıp ceza yemeniz durumunda hiçbir yasal sorumluluk kabul etmiyorum.
-    </p>
     <p>
-      Ayrıca bu websitesi hiçbir <b>kişisel verinizi saklamamaktadır</b>  ve tamamen sizin tarayıcınızda çalışmaktadır.
+      bugunyasakvarmi.com hiçbir <b>kişisel verinizi saklamamaktadır</b>. Yalnızca sizin tarayıcınızda çalışmaktadır. Ayrıca da açık kaynak kodlu bir projedir. Kaynak kodlarına <b-link
+        href="https://github.com/berkay-korkmaz/bugunyasakvarmi"
+        class="text-decoration-none font-weight-bold">
+        buradan ulaşabilirsiniz.
+      </b-link>
     </p>
   </b-modal>
 </template>
