@@ -30,7 +30,7 @@ npm run build
 👤 **Berkay Korkmaz**
 
 * Github: [@berkay-korkmaz](https://github.com/berkay-korkmaz)
-* LinkedIn: [@berkayykorkmaz](https://linkedin.com/in/berkayykorkmaz)
+* LinkedIn: [@berkayykorkmaz](https://linkedin.com/in/berkaykorkmaz)
 
 ## Show your support
 
