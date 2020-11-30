@@ -8,7 +8,14 @@
       <h1 class="font-weight-bold h2">
         Sokağa çıkma yasağı var mı?
       </h1>
-      <date-time-now />
+      <p class="mb-0">
+        <date-time-now />
+      </p>
+      <p class="mb-0">
+        <small class="text-muted">
+          Güncelleme tarihi: <b>30 Kasım Pazartesi 2020 20:15</b>
+        </small>
+      </p>
     </div>
     <b-card
       body-class="p-4"
