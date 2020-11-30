@@ -8,14 +8,21 @@
       <h1 class="font-weight-bold h2">
         Sokağa çıkma yasağı var mı?
       </h1>
-      <date-time-now />
+      <p class="mb-0">
+        <date-time-now />
+      </p>
+      <p class="mb-0">
+        <small class="text-muted">
+          Güncelleme tarihi: <b>30 Kasım Pazartesi 2020 20:15</b>
+        </small>
+      </p>
     </div>
     <b-card
       body-class="p-4"
       class="border-0 shadow mb-4">
       <b-form
         id="check-form"
-        @submit.prevent="check">
+        @submit.prevent="checkIfForbidden">
         <b-form-row>
           <b-col md="7">
             <b-form-group
@@ -198,7 +205,7 @@ export default {
     isWeekendDay (day) {
       return [0, 6].includes(day)
     },
-    check () {
+    checkIfForbidden () {
       if (this.working) {
         this.$router.push({
           name: 'Serbest',
@@ -212,13 +219,16 @@ export default {
       const hours = date.getHours()
       let isForbidden = false
 
-      if (this.ageGroup === 0) {
-        if (hours < 13 || hours >= 16) isForbidden = true
-      } else if (this.ageGroup === 2) {
-        if (hours < 10 || hours >= 13) isForbidden = true
+      if (this.isWeekendDay(dayOfWeek)) {
+        isForbidden = true
       } else {
-        if (this.isWeekendDay(dayOfWeek) && (hours < 10 || hours >= 20)) isForbidden = true
-        else if (dayOfWeek === 1 && hours < 5) isForbidden = true
+        if (this.ageGroup === 0) {
+          if (hours < 13 || hours >= 16) isForbidden = true
+        } else if (this.ageGroup === 2) {
+          if (hours < 10 || hours >= 13) isForbidden = true
+        } else {
+          if (hours < 5 || hours >= 21) isForbidden = true
+        }
       }
 
       if (isForbidden) {
